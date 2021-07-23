@@ -114,7 +114,7 @@ namespace SQLProj
                         while (rec.Read())
                         {
                             int year = Convert.ToInt32(rec[0]);
-                            if (!compGrpd.ContainsKey(year)) compGrpd.Add(Convert.ToInt32(rec[0]), new Dictionary<string, int>());
+                            if (!compGrpd.ContainsKey(year)) compGrpd.Add(year, new Dictionary<string, int>());
                             else compGrpd[year].Add(Convert.ToString(rec[1]), Convert.ToInt32(rec[2])); 
                         }
                     }
